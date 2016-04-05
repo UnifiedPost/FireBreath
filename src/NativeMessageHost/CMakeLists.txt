@@ -63,6 +63,11 @@ file (GLOB MAC_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
 SOURCE_GROUP(Mac FILES ${MAC_SOURCES})
 
 if (WIN32)
+	SET(CMAKE_MODULE_PATH "${FB_ROOT}/cmake")
+	find_package(WinDDK REQUIRED)
+	message("Adding WINDDK directories")
+	include_directories(${WINDDK_INCLUDE_DIR}/atl71)
+	link_directories(${WINDDK_DIR}/lib/ATL/i386)
     set_source_files_properties(${MAC_SOURCES} PROPERTIES HEADER_FILE_ONLY 1)
     set_source_files_properties(${X11_SOURCES} PROPERTIES HEADER_FILE_ONLY 1)
 elseif(APPLE)
