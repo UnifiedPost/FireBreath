@@ -21,8 +21,8 @@ Element::Element(const FB::JSObjectPtr& element, IWebBrowser *web)
     : FB::ActiveX::AXDOM::Node(element, web), FB::DOM::Node(element), FB::DOM::Element(element),
       m_axDisp(std::dynamic_pointer_cast<IDispatchAPI>(element)->getIDispatch()), m_webBrowser(web)
 {
-    if (!m_axDisp)
-        throw std::bad_cast("This is not a valid object");
+	if (!m_axDisp)
+		throw std::bad_cast();// ("This is not a valid object");
 }
 
 Element::~Element()
