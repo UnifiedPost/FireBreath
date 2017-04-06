@@ -14,6 +14,10 @@
 
 #include <memory>
 
+#pragma once
+#ifndef FB_VARIANT_CONVERSION_H
+#define FB_VARIANT_CONVERSION_H
+
 namespace FB {
     class variant;
     class JSAPI;
@@ -82,3 +86,4 @@ namespace FB {
     }
 }
 
+#endif // FB_VARIANT_CONVERSION_H

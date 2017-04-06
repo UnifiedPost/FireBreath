@@ -28,7 +28,7 @@ Copyright 2009 Richard Bateman, Firebreath development team
 #include "npfunctions.h"
 #include "npapi.h"
 #include "npruntime.h"
-#include "variant.h"
+#include "APITypes.h"
 
 #if !defined(__QUICKDRAWAPI__) && !defined(NP_NO_QUICKDRAW)
 #define NP_NO_QUICKDRAW
