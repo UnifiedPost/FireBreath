@@ -43,7 +43,7 @@ namespace FB
     FB_FORWARD_PTR(BrowserHost);
     FB_FORWARD_PTR(JSAPI);
     FB_FORWARD_PTR(JSObject);
-    class variant;
+
     template <typename T>
     class Deferred;
     template <typename T>
