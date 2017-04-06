@@ -17,6 +17,7 @@
 #define H_FBDEFERREDUTILS
 
 #include <Deferred.h>
+#include <APITypes.h>
 
 namespace FB {
     variantPromise whenAllPromises(VariantPromiseList args, std::function<variantPromise(VariantList)> cb);

@@ -25,6 +25,7 @@ Copyright 2009 Richard Bateman, Firebreath development team
 #include <cstdint>
 #include "FBPointers.h"
 #include "variant.h"
+#include "Deferred.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 /// @namespace  FB
@@ -44,10 +45,6 @@ namespace FB
     FB_FORWARD_PTR(JSAPI);
     FB_FORWARD_PTR(JSObject);
 
-    template <typename T>
-    class Deferred;
-    template <typename T>
-    class Promise;
 
     using variantDeferred = Deferred < variant > ;
     using variantPromise = Promise < variant > ;

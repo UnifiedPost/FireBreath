@@ -18,7 +18,9 @@ Copyright 2015 Richard Bateman and the FireBreath Dev Team
 
 #include <functional>
 #include <type_traits>
-#include <APITypes.h>
+#include <vector>
+#include "FBPointers.h"
+#include "variant.h"
 
 namespace FB {
     
