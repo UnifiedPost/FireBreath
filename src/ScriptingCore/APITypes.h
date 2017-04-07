@@ -45,13 +45,14 @@ namespace FB
     FB_FORWARD_PTR(JSAPI);
     FB_FORWARD_PTR(JSObject);
 
-
     using variantDeferred = Deferred < variant > ;
     using variantPromise = Promise < variant > ;
     namespace variant_detail {
         // Note that empty translates into return VOID (undefined)
         struct empty;
     }
+
+
     
     // Variant list
 
@@ -303,6 +304,22 @@ namespace FB
         int32_t bottom;
         int32_t right;
     };
+
+
+	namespace variant_detail {
+		namespace conversion {
+
+			variant make_variant(const char* x);
+			variant make_variant(const wchar_t* x);
+			variant make_variant(const FB::FBNull);
+			variant make_variant(const std::exception);
+			variant make_variant(const std::exception_ptr);
+
+			const FB::FBNull convert_variant(const variant&, const type_spec<FBNull>);
+			const FB::FBVoid convert_variant(const variant&, const type_spec<FBVoid>);
+
+		}
+	}
 }
 
 // This needs to be included after all our classes are defined because it relies on types defined in this file
