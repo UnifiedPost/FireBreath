@@ -22,3 +22,6 @@ src/libs/curl/curl
 tags
 bin
 docs
+
+# ignore openssl files 
+src/libs/openssl/openssl
